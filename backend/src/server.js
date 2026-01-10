@@ -11,6 +11,7 @@ import { connectDB } from "./lib/db.js";
 import { functions, inngest } from "./lib/inngest.js";
 import { protectRoute } from "./middleware/protectRoute.js";
 import chatRoutes from "./routes/chatRoutes.js";
+import sessionRoutes from "./routes/sessionRoutes.js"
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use(clerkMiddleware()); //this will add auth field to request object : req.a
 
 app.use("/api/inngest", serve({ client: inngest, functions }));
 app.use("/api/chat",chatRoutes);
+app.use("/api/sessions",sessionRoutes);
 
 app.get("/health", (req, res) => {
   res.status(200).json({ msg: "api is up and running" });
