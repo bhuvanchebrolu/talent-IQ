@@ -121,6 +121,7 @@ const addUser = async () => {
     name: newUser.name,
     image: newUser.profileImage,
   });
+  //send a welcome message to user--todo
 };
 
 addUser();
