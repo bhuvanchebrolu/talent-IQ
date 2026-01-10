@@ -115,7 +115,7 @@ const addUser = async () => {
     profileImage: userData.image_url,
   };
 
-  await User.create(newUser);
+  // await User.create(newUser);
   await upsertStreamUser({
     id: newUser.clerkId.toString(),
     name: newUser.name,
