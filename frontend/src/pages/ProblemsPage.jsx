@@ -5,6 +5,7 @@ import { ChevronRightIcon, Code2Icon } from 'lucide-react';
 import { getDifficultyBadgeClass } from '../lib/utils.js';
 import { Link, useLocation } from "react-router";
 
+
 function ProblemsPage() {
   const problems=Object.values(PROBLEMS);//all elements of object added into 
   
