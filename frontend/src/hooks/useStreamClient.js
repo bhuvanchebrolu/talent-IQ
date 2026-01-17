@@ -22,6 +22,8 @@ function useStreamClient({ session, loadingSession, isHost, isParticipant }) {
 
       if (!isHost && !isParticipant) return;
 
+      if(session.status==="completed") return;
+
       try {
         const { token, userId, userName, userImage } =
           await sessionApi.getStreamToken();
