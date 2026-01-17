@@ -38,7 +38,7 @@ const DashboardPage = () => {
       {
         onSuccess: (data) => {
           setShowCreateModal(false);
-          navigate(`/sessions/${data.session._id}`);
+          navigate(`/session/${data.session._id}`);
         },
       }
     );
